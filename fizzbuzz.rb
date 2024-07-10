@@ -85,7 +85,7 @@ def fizzbuzz4(n)
       output << dict[5]
     end
 
-    if i % 7 == 0 && output == []
+    if i % 7 == 0 && output != []
       output << dict[7]
     end
 
