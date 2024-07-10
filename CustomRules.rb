@@ -16,7 +16,7 @@ def rule_5(number,output)
 end
 
 def rule_7(number,output)
-  if number % 7 == 0 && output != []
+  if number % 7 == 0
     output << $dict[7]
   end
   output

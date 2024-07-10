@@ -26,7 +26,7 @@ def fizzbuzz2
       output += 'Buzz'
     end
 
-    if i % 7 == 0 && output != ''
+    if i % 7 == 0
       output += 'Bang'
     end
 
@@ -51,7 +51,7 @@ def fizzbuzz3
       output += 'Buzz'
     end
 
-    if i % 7 == 0 && output != ''
+    if i % 7 == 0
       output += 'Bang'
     end
 
@@ -85,7 +85,7 @@ def fizzbuzz4(n)
       output << dict[5]
     end
 
-    if i % 7 == 0 && output != []
+    if i % 7 == 0
       output << dict[7]
     end
 
@@ -132,7 +132,7 @@ def fizzbuzz5(n)
       output << dict[5]
     end
 
-    if i % 7 == 0 && output != []
+    if i % 7 == 0
       output << dict[7]
     end
 
