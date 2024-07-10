@@ -132,7 +132,7 @@ def fizzbuzz5(n)
       output << dict[5]
     end
 
-    if i % 7 == 0 && output == []
+    if i % 7 == 0
       output << dict[7]
     end
 
@@ -141,17 +141,11 @@ def fizzbuzz5(n)
     end
 
     if i % 13 == 0
-      index = 0
-      for substring in output
-        puts substring
-        if substring[0] == 'B'
-          output.insert(index,dict[13])
-          break
-        end
-        index += 1
-      end
-      if index == output.length
+      index = output.index {|element| element[0] == 'B'}
+      if index.nil?
         output << dict[13]
+      else
+        output.insert(index,dict[13])
       end
     end
 
