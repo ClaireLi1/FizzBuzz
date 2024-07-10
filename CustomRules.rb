@@ -1,4 +1,5 @@
 $dict = {3 => 'Fizz', 5 => 'Buzz', 7 => 'Bang', 11 => 'Bong', 13 => 'Fezz'}
+$rules_number = [3,5,7,11,13,17]
 
 def rule_3(number, output)
   if number % 3 == 0
@@ -65,8 +66,15 @@ def custom_rules(rules,n)
   end
 end
 
-puts 'Enter a combination of rules you want to implement from {3,5,7,11,13,17}, separated by spaces:'
-rules = gets.chomp.split(' ')
+def validate_input(rules)
+  if rules.any? { |rule| !$rules_number.include?(rule) }
+    puts 'The rules you have entered are not valid.'
+    exit
+  end
+end
 
+puts 'Enter a combination of rules you want to implement from {3,5,7,11,13,17}, separated by spaces:'
+rules = gets.chomp.split(' ').map { |str| str.to_i }.sort
+validate_input(rules)
 custom_rules(rules,300)
 
